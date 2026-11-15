@@ -101,7 +101,6 @@ w('''/*
         alt_tab_rotate: alt_tab_rotate {
             compatible = "zmk,behavior-sensor-rotate";
             label = "ALT_TAB_ROTATE";
-            display-name = "ALT_TAB_ROTATE";
             #sensor-binding-cells = <0>;
             bindings = <&kp 0x0c070050>, <&kp 0x0c07004f>;
             tap-ms = <20>;
@@ -110,7 +109,6 @@ w('''/*
         enc_msc_down_up: enc_msc_down_up {
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENCODER_MSC_DOWN_UP";
-            display-name = "ENCODER_MSC_DOWN_UP";
             #sensor-binding-cells = <0>;
             bindings = <&msc MOVE_Y(-80)>, <&msc MOVE_Y(80)>;
             tap-ms = <20>;
@@ -119,7 +117,6 @@ w('''/*
         enc_key_press: enc_key_press {
             compatible = "zmk,behavior-sensor-rotate-var";
             label = "enc_key_press";
-            display-name = "enc_key_press";
             #sensor-binding-cells = <2>;
             bindings = <&kp>, <&kp>;
             tap-ms = <5>;
