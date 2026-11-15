@@ -104,14 +104,14 @@
         at { timeout-ms = <50>; key-positions = <3 4>; bindings = <&kp AT_SIGN>; };
         lpar { timeout-ms = <50>; key-positions = <6 7>; bindings = <&kp LEFT_PARENTHESIS>; };
         rpar { timeout-ms = <50>; key-positions = <7 8>; bindings = <&kp RIGHT_PARENTHESIS>; };
-        amp { timeout-ms = <50>; key-positions = <8 9>; bindings = <&kp AMPERSAND>; };
+        del { timeout-ms = <50>; key-positions = <8 9>; bindings = <&kp DELETE>; };
         tab { timeout-ms = <50>; key-positions = <11 12>; bindings = <&kp TAB>; };
         shift_tab { timeout-ms = <50>; key-positions = <12 13>; bindings = <&kp LS(TAB)>; };
         spotlight { timeout-ms = <50>; key-positions = <13 14>; bindings = <&kp LG(SPACE)>; };
         click { timeout-ms = <50>; key-positions = <16 17>; bindings = <&mkp 1>; };
         cmd_enter { timeout-ms = <50>; key-positions = <17 18>; bindings = <&kp LG(ENTER)>; };
         enter { timeout-ms = <50>; key-positions = <19 20>; bindings = <&kp ENTER>; };
-        quote { timeout-ms = <50>; key-positions = <20 21>; bindings = <&kp SINGLE_QUOTE>; };
+        enter2 { timeout-ms = <50>; key-positions = <20 21>; bindings = <&kp ENTER>; };
     };
 
     keymap {
