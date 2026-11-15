@@ -154,7 +154,7 @@ COMBOS = [
     ("amp", (8, 9), "&kp AMPERSAND"), ("tab", (11, 12), "&kp TAB"),
     ("shift_tab", (12, 13), "&kp LS(TAB)"), ("spotlight", (13, 14), "&kp LG(SPACE)"),
     ("click", (16, 17), "&mkp 1"), ("cmd_enter", (17, 18), "&kp LG(ENTER)"),
-    ("lbkt", (18, 19), "&kp LEFT_BRACKET"), ("rbkt", (19, 20), "&kp RIGHT_BRACKET"),
+    ("enter", (19, 20), "&kp ENTER"),  # 出品者は J+K「[」・K+L「]」。[ ] はレイヤー 1 にもある
     ("quote", (20, 21), "&kp SINGLE_QUOTE"),
 ]
 for name, (a, b), bnd in COMBOS:
