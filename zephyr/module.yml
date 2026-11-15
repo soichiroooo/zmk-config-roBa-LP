@@ -1,4 +1,6 @@
-name: roBa
+name: roba-layer-report
 build:
+  cmake: modules/layer_report
+  kconfig: modules/layer_report/Kconfig
   settings:
     board_root: .

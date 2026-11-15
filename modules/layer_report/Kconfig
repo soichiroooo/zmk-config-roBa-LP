@@ -1,0 +1,3 @@
+config ROBA_LAYER_REPORT
+    bool "Report the active layer to the host over raw HID"
+    depends on RAW_HID
