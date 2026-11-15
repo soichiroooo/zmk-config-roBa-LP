@@ -152,8 +152,8 @@
             bindings = <
                 &kp 0x7003a  &kp 0x7003b  &kp 0x7003c  &kp 0x7003d  &kp 0x7003e  &kp 0x7003f
                 &kp 0x70040  &kp 0x70041  &kp 0x70042  &kp 0x70043  &trans  &trans
-                &kp 0x70052  &trans  &kp 0x1070052  &trans  &trans  &mkp 1
-                &mkp 4  &kp 0x70052  &kp 0x70044  &kp 0x70045  &trans  &kp 0x70050
+                &kp 0x70052  &trans  &kp 0x1070052  &trans  &trans  &trans
+                &trans  &kp 0x70052  &kp 0x70044  &kp 0x70045  &trans  &kp 0x70050
                 &kp 0x70051  &kp 0x7004f  &kp 0x1070051  &trans  &kp 0x8070050  &kp 0x807004f
                 &kp 0x70050  &kp 0x70051  &kp 0x7004f  &kp 0xc00e9  &trans  &trans
                 &trans  &trans  &trans  &trans  &kp 0x8070050  &kp 0x807004f
