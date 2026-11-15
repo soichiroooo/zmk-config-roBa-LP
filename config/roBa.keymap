@@ -181,8 +181,8 @@
             bindings = <
                 &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &trans  &trans  &trans
-                &mkp 2  &mkp 1  &trans  &trans  &trans  &mkp 1
-                &mkp 4  &mkp 2  &trans  &trans  &trans  &trans
+                &mkp 2  &mkp 1  &trans  &trans  &trans  &trans
+                &mkp 1  &mkp 4  &mkp 2  &trans  &trans  &trans
                 &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &trans  &trans  &trans
