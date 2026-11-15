@@ -108,7 +108,6 @@
         tab { timeout-ms = <50>; key-positions = <11 12>; bindings = <&kp TAB>; };
         shift_tab { timeout-ms = <50>; key-positions = <12 13>; bindings = <&kp LS(TAB)>; };
         spotlight { timeout-ms = <50>; key-positions = <13 14>; bindings = <&kp LG(SPACE)>; };
-        click { timeout-ms = <50>; key-positions = <16 17>; bindings = <&mkp 1>; };
         cmd_enter { timeout-ms = <50>; key-positions = <17 18>; bindings = <&kp LG(ENTER)>; };
         enter { timeout-ms = <50>; key-positions = <19 20>; bindings = <&kp ENTER>; };
         enter2 { timeout-ms = <50>; key-positions = <20 21>; bindings = <&kp ENTER>; };

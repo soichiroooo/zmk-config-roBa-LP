@@ -153,7 +153,7 @@ COMBOS = [
     ("lpar", (6, 7), "&kp LEFT_PARENTHESIS"), ("rpar", (7, 8), "&kp RIGHT_PARENTHESIS"),
     ("del", (8, 9), "&kp DELETE"), ("tab", (11, 12), "&kp TAB"),
     ("shift_tab", (12, 13), "&kp LS(TAB)"), ("spotlight", (13, 14), "&kp LG(SPACE)"),
-    ("click", (16, 17), "&mkp 1"), ("cmd_enter", (17, 18), "&kp LG(ENTER)"),
+    ("cmd_enter", (17, 18), "&kp LG(ENTER)"),
     ("enter", (19, 20), "&kp ENTER"),  # 出品者は J+K「[」・K+L「]」。[ ] はレイヤー 1 にもある
     ("enter2", (20, 21), "&kp ENTER"),
 ]
