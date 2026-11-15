@@ -104,7 +104,7 @@
         at { timeout-ms = <50>; key-positions = <3 4>; bindings = <&kp AT_SIGN>; };
         lpar { timeout-ms = <50>; key-positions = <6 7>; bindings = <&kp LEFT_PARENTHESIS>; };
         rpar { timeout-ms = <50>; key-positions = <7 8>; bindings = <&kp RIGHT_PARENTHESIS>; };
-        del { timeout-ms = <50>; key-positions = <8 9>; bindings = <&kp DELETE>; };
+        bspc { timeout-ms = <50>; key-positions = <8 9>; bindings = <&kp BACKSPACE>; };
         tab { timeout-ms = <50>; key-positions = <11 12>; bindings = <&kp TAB>; };
         shift_tab { timeout-ms = <50>; key-positions = <12 13>; bindings = <&kp LS(TAB)>; };
         spotlight { timeout-ms = <50>; key-positions = <13 14>; bindings = <&kp LG(SPACE)>; };

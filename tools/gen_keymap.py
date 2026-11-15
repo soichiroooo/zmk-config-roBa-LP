@@ -151,7 +151,7 @@ COMBOS = [
     ("esc", (0, 1), "&to_layer_0 ESCAPE"), ("grave", (1, 2), "&kp GRAVE"),
     ("excl", (2, 3), "&kp EXCLAMATION"), ("at", (3, 4), "&kp AT_SIGN"),
     ("lpar", (6, 7), "&kp LEFT_PARENTHESIS"), ("rpar", (7, 8), "&kp RIGHT_PARENTHESIS"),
-    ("del", (8, 9), "&kp DELETE"), ("tab", (11, 12), "&kp TAB"),
+    ("bspc", (8, 9), "&kp BACKSPACE"), ("tab", (11, 12), "&kp TAB"),
     ("shift_tab", (12, 13), "&kp LS(TAB)"), ("spotlight", (13, 14), "&kp LG(SPACE)"),
     ("cmd_enter", (17, 18), "&kp LG(ENTER)"),
     ("enter", (19, 20), "&kp ENTER"),  # 出品者は J+K「[」・K+L「]」。[ ] はレイヤー 1 にもある
