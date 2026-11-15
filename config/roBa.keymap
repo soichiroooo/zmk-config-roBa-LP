@@ -110,8 +110,9 @@
         spotlight { timeout-ms = <50>; key-positions = <13 14>; bindings = <&kp LG(SPACE)>; };
         click { timeout-ms = <50>; key-positions = <16 17>; bindings = <&mkp 1>; };
         cmd_enter { timeout-ms = <50>; key-positions = <17 18>; bindings = <&kp LG(ENTER)>; };
-        enter { timeout-ms = <50>; key-positions = <19 20>; bindings = <&kp ENTER>; };
-        quote { timeout-ms = <50>; key-positions = <20 21>; bindings = <&kp SINGLE_QUOTE>; };
+        lbkt { timeout-ms = <50>; key-positions = <18 19>; bindings = <&kp LEFT_BRACKET>; };
+        rbkt { timeout-ms = <50>; key-positions = <19 20>; bindings = <&kp RIGHT_BRACKET>; };
+        enter { timeout-ms = <50>; key-positions = <20 21>; bindings = <&kp ENTER>; };
     };
 
     keymap {
@@ -138,7 +139,7 @@
                 &kp 0x70035  &kp 0x207001e  &kp 0x207001f  &kp 0x2070020  &kp 0x2070021  &kp 0x70037
                 &kp 0x7005f  &kp 0x70060  &kp 0x70061  &kp 0x207002e  &kp 0x2070022  &kp 0x2070023
                 &kp 0x2070024  &trans  &trans  &trans  &trans  &kp 0x7002d
-                &kp 0x7005c  &kp 0x7005d  &kp 0x7005e  &kp 0x7002d  &mt 0x700e1 0x7002f  &kp 0x70030
+                &kp 0x7005c  &kp 0x7005d  &kp 0x7005e  &kp 0x70034  &mt 0x700e1 0x7002f  &kp 0x70030
                 &kp 0x207002f  &kp 0x2070030  &kp 0x70031  &trans  &trans  &kp 0x70062
                 &kp 0x70059  &kp 0x7005a  &kp 0x7005b  &kp 0x2070025  &kp 0x2070031  &kp 0x2070026
                 &kp 0x2070027  &to 0  &trans  &trans  &trans  &trans
