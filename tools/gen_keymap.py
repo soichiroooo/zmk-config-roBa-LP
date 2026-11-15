@@ -152,11 +152,9 @@ COMBOS = [
     ("excl", (2, 3), "&kp EXCLAMATION"), ("at", (3, 4), "&kp AT_SIGN"),
     ("lpar", (6, 7), "&kp LEFT_PARENTHESIS"), ("rpar", (7, 8), "&kp RIGHT_PARENTHESIS"),
     ("bspc", (8, 9), "&kp BACKSPACE"), ("tab", (11, 12), "&kp TAB"),
-    ("shift_tab", (12, 13), "&kp LS(TAB)"), ("spotlight", (13, 14), "&kp LG(SPACE)"),
-    ("cmd_enter", (17, 18), "&kp LG(ENTER)"),
-    ("enter_jk", (18, 19), "&kp ENTER"),
-    ("enter", (19, 20), "&kp ENTER"),  # 出品者は J+K「[」・K+L「]」。[ ] はレイヤー 1 にもある
-    ("enter2", (20, 21), "&kp ENTER"),
+    ("shift_tab", (12, 13), "&kp LS(TAB)"), ("enter_jk", (18, 19), "&kp ENTER"),
+    ("lpar_kl", (19, 20), "&kp LEFT_PARENTHESIS"),  # 出品者は J+K「[」・K+L「]」。[ ] はレイヤー 1 にもある
+    ("rpar_kl", (20, 21), "&kp RIGHT_PARENTHESIS"),
 ]
 for name, (a, b), bnd in COMBOS:
     w(f"        {name} {{ timeout-ms = <50>; key-positions = <{a} {b}>; bindings = <{bnd}>; }};\n")
