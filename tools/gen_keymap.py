@@ -29,6 +29,7 @@ def binding(b):
     return {
         "Key Press": lambda: f"&kp {h(p1)}",
         "Mod-Tap": lambda: f"&mt {h(p1)} {h(p2)}",
+        "Mod-Tap (文字キー)": lambda: f"&mt_key {h(p1)} {h(p2)}",
         "Layer-Tap": lambda: f"&lt {p1} {h(p2)}",
         "LAYER_TAP_TO_0": lambda: f"&lt_to_layer_0 {p1} {h(p2)}",
         "Momentary Layer": lambda: f"&mo {p1}",
@@ -41,7 +42,7 @@ def binding(b):
         "Bootloader": lambda: "&bootloader",
     }[n]()
 
-SENSORS = {0: "&enc_msc_down_up", 2: "&enc_key_press 0xc00e9 0xc00ea", 4: "&alt_tab_rotate"}
+SENSORS = {0: "&enc_msc_down_up", 2: "&enc_key_press 0xc00e9 0xc00ea", 4: "&enc_msc_down_up"}  # トラックボール中もジョグダイヤルはスクロール（出品者は ⌥⌘←/→）
 
 out = []
 w = out.append

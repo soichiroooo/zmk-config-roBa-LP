@@ -136,12 +136,12 @@
         layer_1 {
             display-name = "L1";
             bindings = <
-                &kp 0x70035  &kp 0x207001e  &kp 0x207001f  &kp 0x2070020  &kp 0x2070021  &kp 0x7005f
-                &kp 0x70060  &kp 0x70061  &trans  &kp 0x207002e  &kp 0x2070022  &kp 0x2070023
-                &kp 0x2070024  &trans  &trans  &trans  &trans  &kp 0x7005c
-                &kp 0x7005d  &kp 0x7005e  &trans  &kp 0x7002d  &mt 0x700e1 0x7002f  &kp 0x70030
-                &kp 0x207002f  &kp 0x2070030  &kp 0x70031  &trans  &kp 0x70062  &kp 0x70059
-                &kp 0x7005a  &kp 0x7005b  &trans  &kp 0x2070025  &kp 0x2070031  &kp 0x2070026
+                &kp 0x70035  &kp 0x207001e  &kp 0x207001f  &kp 0x2070020  &kp 0x2070021  &kp 0x70037
+                &kp 0x7005f  &kp 0x70060  &kp 0x70061  &kp 0x207002e  &kp 0x2070022  &kp 0x2070023
+                &kp 0x2070024  &trans  &trans  &trans  &trans  &kp 0x7002d
+                &kp 0x7005c  &kp 0x7005d  &kp 0x7005e  &kp 0x7002d  &mt 0x700e1 0x7002f  &kp 0x70030
+                &kp 0x207002f  &kp 0x2070030  &kp 0x70031  &trans  &trans  &kp 0x70062
+                &kp 0x70059  &kp 0x7005a  &kp 0x7005b  &kp 0x2070025  &kp 0x2070031  &kp 0x2070026
                 &kp 0x2070027  &to 0  &trans  &trans  &trans  &trans
                 &kp 0x70038
             >;
@@ -188,7 +188,7 @@
                 &trans  &trans  &trans  &trans  &trans  &trans
                 &trans
             >;
-            sensor-bindings = <&alt_tab_rotate>;
+            sensor-bindings = <&enc_msc_down_up>;
         };
     };
 };
