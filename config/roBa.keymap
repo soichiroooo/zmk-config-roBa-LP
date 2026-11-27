@@ -14,7 +14,7 @@
 
 &trackball {
     automouse-layer = <4>;
-    scroll-layers = <5>;    /* J＋K を押し続けている間はスクロール */
+    scroll-layers = <5>;    /* D＋F を押し続けている間はスクロール */
 };
 
 / {
@@ -42,11 +42,11 @@
             tapping-term-ms = <180>;
         };
 
-        /* J＋K 用: 短く押すと Enter、押し続けるとレイヤー 5（トラックボールでスクロール） */
-        enter_scroll: enter_scroll {
+        /* D＋F 用: 短く押すと Shift＋Tab、押し続けるとレイヤー 5（トラックボールでスクロール） */
+        tap_scroll: tap_scroll {
             compatible = "zmk,behavior-hold-tap";
-            label = "ENTER_SCROLL";
-            display-name = "Enter / スクロール";
+            label = "TAP_SCROLL";
+            display-name = "キー / スクロール";
             #binding-cells = <2>;
             bindings = <&mo>, <&kp>;
             flavor = "hold-preferred";
@@ -118,8 +118,8 @@
         rpar { timeout-ms = <50>; key-positions = <7 8>; bindings = <&kp RIGHT_PARENTHESIS>; };
         bspc { timeout-ms = <50>; key-positions = <8 9>; bindings = <&kp BACKSPACE>; };
         tab { timeout-ms = <50>; key-positions = <11 12>; bindings = <&kp TAB>; };
-        shift_tab { timeout-ms = <50>; key-positions = <12 13>; bindings = <&kp LS(TAB)>; };
-        enter_jk { timeout-ms = <50>; key-positions = <18 19>; bindings = <&enter_scroll 5 ENTER>; };
+        shift_tab { timeout-ms = <50>; key-positions = <12 13>; bindings = <&tap_scroll 5 LS(TAB)>; };
+        enter_jk { timeout-ms = <50>; key-positions = <18 19>; bindings = <&kp ENTER>; };
         lpar_kl { timeout-ms = <50>; key-positions = <19 20>; bindings = <&kp LEFT_PARENTHESIS>; };
         rpar_kl { timeout-ms = <50>; key-positions = <20 21>; bindings = <&kp RIGHT_PARENTHESIS>; };
     };
