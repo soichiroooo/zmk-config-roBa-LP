@@ -17,7 +17,7 @@ layers[4][13] = [MKP, 1, 0]            # トラックボール中: F＝左クリ
 layers[4][12] = [MKP, 2, 0]            # トラックボール中: D＝右クリック
 layers[0][10] = ["mt_key", 0x700E0, 0x70004]   # A / 長押し Ctrl（打鍵中は長押しにしない）
 layers[0][22] = ["mt_key", 0x700E1, 0x7001D]   # Z / 長押し Shift（同上）
-if len(layers) == 5:                   # L5: D＋F を押し続けている間のスクロール用（中身は全部すり抜け）
+if len(layers) == 5:                   # L5: D＋F・J＋K を押し続けている間のスクロール用（中身は全部すり抜け）
     layers.append([[TRANS, 0, 0] for _ in layers[0]])
 
 def h(v):
@@ -64,7 +64,7 @@ w('''/*
 
 &trackball {
     automouse-layer = <4>;
-    scroll-layers = <5>;    /* D＋F を押し続けている間はスクロール */
+    scroll-layers = <5>;    /* D＋F・J＋K を押し続けている間はスクロール */
 };
 
 / {
@@ -92,7 +92,7 @@ w('''/*
             tapping-term-ms = <180>;
         };
 
-        /* D＋F 用: 短く押すと Shift＋Tab、押し続けるとレイヤー 5（トラックボールでスクロール） */
+        /* D＋F・J＋K 用: 短く押すと Shift＋Tab・Enter、押し続けるとレイヤー 5（トラックボールでスクロール） */
         tap_scroll: tap_scroll {
             compatible = "zmk,behavior-hold-tap";
             label = "TAP_SCROLL";
@@ -166,7 +166,7 @@ COMBOS = [
     ("excl", (2, 3), "&kp EXCLAMATION"), ("at", (3, 4), "&kp AT_SIGN"),
     ("lpar", (6, 7), "&kp LEFT_PARENTHESIS"), ("rpar", (7, 8), "&kp RIGHT_PARENTHESIS"),
     ("bspc", (8, 9), "&kp BACKSPACE"), ("tab", (11, 12), "&kp TAB"),
-    ("shift_tab", (12, 13), "&tap_scroll 5 LS(TAB)"), ("enter_jk", (18, 19), "&kp ENTER"),
+    ("shift_tab", (12, 13), "&tap_scroll 5 LS(TAB)"), ("enter_jk", (18, 19), "&tap_scroll 5 ENTER"),
     ("lpar_kl", (19, 20), "&kp LEFT_PARENTHESIS"),  # 出品者は J+K「[」・K+L「]」。[ ] はレイヤー 1 にもある
     ("rpar_kl", (20, 21), "&kp RIGHT_PARENTHESIS"),
 ]

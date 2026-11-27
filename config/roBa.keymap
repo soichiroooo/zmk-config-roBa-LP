@@ -14,7 +14,7 @@
 
 &trackball {
     automouse-layer = <4>;
-    scroll-layers = <5>;    /* D＋F を押し続けている間はスクロール */
+    scroll-layers = <5>;    /* D＋F・J＋K を押し続けている間はスクロール */
 };
 
 / {
@@ -42,7 +42,7 @@
             tapping-term-ms = <180>;
         };
 
-        /* D＋F 用: 短く押すと Shift＋Tab、押し続けるとレイヤー 5（トラックボールでスクロール） */
+        /* D＋F・J＋K 用: 短く押すと Shift＋Tab・Enter、押し続けるとレイヤー 5（トラックボールでスクロール） */
         tap_scroll: tap_scroll {
             compatible = "zmk,behavior-hold-tap";
             label = "TAP_SCROLL";
@@ -119,7 +119,7 @@
         bspc { timeout-ms = <50>; key-positions = <8 9>; bindings = <&kp BACKSPACE>; };
         tab { timeout-ms = <50>; key-positions = <11 12>; bindings = <&kp TAB>; };
         shift_tab { timeout-ms = <50>; key-positions = <12 13>; bindings = <&tap_scroll 5 LS(TAB)>; };
-        enter_jk { timeout-ms = <50>; key-positions = <18 19>; bindings = <&kp ENTER>; };
+        enter_jk { timeout-ms = <50>; key-positions = <18 19>; bindings = <&tap_scroll 5 ENTER>; };
         lpar_kl { timeout-ms = <50>; key-positions = <19 20>; bindings = <&kp LEFT_PARENTHESIS>; };
         rpar_kl { timeout-ms = <50>; key-positions = <20 21>; bindings = <&kp RIGHT_PARENTHESIS>; };
     };
