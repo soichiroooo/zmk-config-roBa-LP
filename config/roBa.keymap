@@ -86,6 +86,96 @@
             bindings = <&kp>, <&kp>;
             tap-ms = <5>;
         };
+
+        num0: num0 {
+            compatible = "zmk,behavior-mod-morph";
+            display-name = "数字0";
+            #binding-cells = <0>;
+            bindings = <&kp 0x70062>, <&kp 0x70027>;
+            mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>;
+            keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>;
+        };
+
+        num1: num1 {
+            compatible = "zmk,behavior-mod-morph";
+            display-name = "数字1";
+            #binding-cells = <0>;
+            bindings = <&kp 0x70059>, <&kp 0x7001e>;
+            mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>;
+            keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>;
+        };
+
+        num2: num2 {
+            compatible = "zmk,behavior-mod-morph";
+            display-name = "数字2";
+            #binding-cells = <0>;
+            bindings = <&kp 0x7005a>, <&kp 0x7001f>;
+            mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>;
+            keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>;
+        };
+
+        num3: num3 {
+            compatible = "zmk,behavior-mod-morph";
+            display-name = "数字3";
+            #binding-cells = <0>;
+            bindings = <&kp 0x7005b>, <&kp 0x70020>;
+            mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>;
+            keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>;
+        };
+
+        num4: num4 {
+            compatible = "zmk,behavior-mod-morph";
+            display-name = "数字4";
+            #binding-cells = <0>;
+            bindings = <&kp 0x7005c>, <&kp 0x70021>;
+            mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>;
+            keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>;
+        };
+
+        num5: num5 {
+            compatible = "zmk,behavior-mod-morph";
+            display-name = "数字5";
+            #binding-cells = <0>;
+            bindings = <&kp 0x7005d>, <&kp 0x70022>;
+            mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>;
+            keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>;
+        };
+
+        num6: num6 {
+            compatible = "zmk,behavior-mod-morph";
+            display-name = "数字6";
+            #binding-cells = <0>;
+            bindings = <&kp 0x7005e>, <&kp 0x70023>;
+            mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>;
+            keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>;
+        };
+
+        num7: num7 {
+            compatible = "zmk,behavior-mod-morph";
+            display-name = "数字7";
+            #binding-cells = <0>;
+            bindings = <&kp 0x7005f>, <&kp 0x70024>;
+            mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>;
+            keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>;
+        };
+
+        num8: num8 {
+            compatible = "zmk,behavior-mod-morph";
+            display-name = "数字8";
+            #binding-cells = <0>;
+            bindings = <&kp 0x70060>, <&kp 0x70025>;
+            mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>;
+            keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>;
+        };
+
+        num9: num9 {
+            compatible = "zmk,behavior-mod-morph";
+            display-name = "数字9";
+            #binding-cells = <0>;
+            bindings = <&kp 0x70061>, <&kp 0x70026>;
+            mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>;
+            keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>;
+        };
     };
 
     macros {
@@ -120,8 +210,8 @@
         tab { timeout-ms = <50>; key-positions = <11 12>; bindings = <&kp TAB>; };
         shift_tab { timeout-ms = <50>; key-positions = <12 13>; bindings = <&tap_scroll 5 LS(TAB)>; };
         enter_jk { timeout-ms = <50>; key-positions = <18 19>; bindings = <&tap_scroll 5 ENTER>; };
-        lpar_kl { timeout-ms = <50>; key-positions = <19 20>; bindings = <&kp LEFT_PARENTHESIS>; };
-        rpar_kl { timeout-ms = <50>; key-positions = <20 21>; bindings = <&kp RIGHT_PARENTHESIS>; };
+        lbkt_kl { timeout-ms = <50>; key-positions = <19 20>; bindings = <&kp LEFT_BRACKET>; };
+        rbkt_ld { timeout-ms = <50>; key-positions = <20 21>; bindings = <&kp RIGHT_BRACKET>; };
     };
 
     keymap {
@@ -146,11 +236,11 @@
             display-name = "L1";
             bindings = <
                 &kp 0x70035  &kp 0x207001e  &kp 0x207001f  &kp 0x2070020  &kp 0x2070021  &kp 0x70037
-                &kp 0x7005f  &kp 0x70060  &kp 0x70061  &kp 0x207002e  &kp 0x2070022  &kp 0x2070023
+                &num7  &num8  &num9  &kp 0x207002e  &kp 0x2070022  &kp 0x2070023
                 &kp 0x2070024  &trans  &trans  &trans  &trans  &kp 0x7002d
-                &kp 0x7005c  &kp 0x7005d  &kp 0x7005e  &kp 0x70034  &mt 0x700e1 0x7002f  &kp 0x70030
-                &kp 0x207002f  &kp 0x2070030  &kp 0x70031  &trans  &trans  &kp 0x70062
-                &kp 0x70059  &kp 0x7005a  &kp 0x7005b  &kp 0x2070025  &kp 0x2070031  &kp 0x2070026
+                &num4  &num5  &num6  &kp 0x70034  &mt 0x700e1 0x7002f  &kp 0x70030
+                &kp 0x207002f  &kp 0x2070030  &kp 0x70031  &trans  &trans  &num0
+                &num1  &num2  &num3  &kp 0x2070025  &kp 0x2070031  &kp 0x2070026
                 &kp 0x2070027  &to 0  &trans  &trans  &trans  &trans
                 &kp 0x70038
             >;

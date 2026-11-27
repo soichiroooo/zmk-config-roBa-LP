@@ -17,6 +17,13 @@ layers[4][13] = [MKP, 1, 0]            # トラックボール中: F＝左クリ
 layers[4][12] = [MKP, 2, 0]            # トラックボール中: D＝右クリック
 layers[0][10] = ["mt_key", 0x700E0, 0x70004]   # A / 長押し Ctrl（打鍵中は長押しにしない）
 layers[0][22] = ["mt_key", 0x700E1, 0x7001D]   # Z / 長押し Shift（同上）
+# レイヤー 1 のテンキー数字: ふだんはテンキーの数字（かな入力中も半角）、⌘・Ctrl・Option 中だけ上の段の数字（⌘1 などが効くように）
+KP_TO_NUM = {0x70059 + i: (f"num{i + 1}", 0x7001E + i) for i in range(9)}
+KP_TO_NUM[0x70062] = ("num0", 0x70027)
+for i, b in enumerate(layers[1]):
+    if not isinstance(b[0], str) and beh[b[0]] == "Key Press" and b[1] in KP_TO_NUM:
+        layers[1][i] = [KP_TO_NUM[b[1]][0], b[1], 0]
+
 if len(layers) == 5:                   # L5: D＋F・J＋K を押し続けている間のスクロール用（中身は全部すり抜け）
     layers.append([[TRANS, 0, 0] for _ in layers[0]])
 
@@ -25,9 +32,13 @@ def h(v):
 
 def binding(b):
     bid, p1, p2 = b
+    if isinstance(bid, str) and bid.startswith("num"):
+        return f"&{bid}"
     if bid == "mt_key":
         return f"&mt_key {h(p1)} {h(p2)}"
     n = beh[bid]
+    if n.startswith("数字"):            # Studio から読み直したときの数字キー（num0〜num9）
+        return f"&num{n[2:]}"
     return {
         "Key Press": lambda: f"&kp {h(p1)}",
         "Mod-Tap": lambda: f"&mt {h(p1)} {h(p2)}",
@@ -136,7 +147,19 @@ w('''/*
             bindings = <&kp>, <&kp>;
             tap-ms = <5>;
         };
-    };
+''')
+for kp, (name, num) in sorted(KP_TO_NUM.items(), key=lambda x: x[1][0]):
+    w(f"""
+        {name}: {name} {{
+            compatible = "zmk,behavior-mod-morph";
+            display-name = "数字{name[3:]}";
+            #binding-cells = <0>;
+            bindings = <&kp {h(kp)}>, <&kp {h(num)}>;
+            mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>;
+            keep-mods = <(MOD_LGUI|MOD_RGUI|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>;
+        }};
+""")
+w('''    };
 
     macros {
         to_layer_0: to_layer_0 {
@@ -167,8 +190,8 @@ COMBOS = [
     ("lpar", (6, 7), "&kp LEFT_PARENTHESIS"), ("rpar", (7, 8), "&kp RIGHT_PARENTHESIS"),
     ("bspc", (8, 9), "&kp BACKSPACE"), ("tab", (11, 12), "&kp TAB"),
     ("shift_tab", (12, 13), "&tap_scroll 5 LS(TAB)"), ("enter_jk", (18, 19), "&tap_scroll 5 ENTER"),
-    ("lpar_kl", (19, 20), "&kp LEFT_PARENTHESIS"),  # 出品者は J+K「[」・K+L「]」。[ ] はレイヤー 1 にもある
-    ("rpar_kl", (20, 21), "&kp RIGHT_PARENTHESIS"),
+    ("lbkt_kl", (19, 20), "&kp LEFT_BRACKET"),   # かな入力中は「、英数入力中は [
+    ("rbkt_ld", (20, 21), "&kp RIGHT_BRACKET"),  # かな入力中は」、英数入力中は ]
 ]
 for name, (a, b), bnd in COMBOS:
     w(f"        {name} {{ timeout-ms = <50>; key-positions = <{a} {b}>; bindings = <{bnd}>; }};\n")
